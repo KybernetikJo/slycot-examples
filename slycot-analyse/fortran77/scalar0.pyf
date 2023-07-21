@@ -1,0 +1,15 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module scalar0 ! in 
+    interface  ! in :scalar0
+        subroutine foo(a,b) ! in :scalar0:scalar.f
+            real*8 :: a
+            real*8 :: b
+        end subroutine foo
+    end interface 
+end python module scalar0
+
+! This file was auto-generated with f2py (version:1.25.1).
+! See:
+! https://web.archive.org/web/20140822061353/http://cens.ioc.ee/projects/f2py2e
