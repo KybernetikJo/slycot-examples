@@ -1,0 +1,17 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module onearr0 ! in 
+    interface  ! in :onearr0
+        subroutine foo(n,m,a,b) ! in :onearr0:onearr.f
+            integer check(n>0) :: n
+            integer check(m>0) :: m
+            real*8 dimension(n), depend(n) :: a
+            real*8 dimension(m), depend(m) :: b
+        end subroutine foo
+    end interface 
+end python module onearr0
+
+! This file was auto-generated with f2py (version:1.25.1).
+! See:
+! https://web.archive.org/web/20140822061353/http://cens.ioc.ee/projects/f2py2e
