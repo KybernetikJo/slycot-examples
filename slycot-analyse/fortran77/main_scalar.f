@@ -1,3 +1,4 @@
+C main_scalar.f
       PROGRAM MAIN
          REAL*8 :: A
          REAL*8 :: B

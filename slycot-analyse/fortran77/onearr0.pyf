@@ -3,11 +3,13 @@
 
 python module onearr0 ! in 
     interface  ! in :onearr0
-        subroutine foo(n,m,a,b) ! in :onearr0:onearr.f
-            integer check(n>0) :: n
-            integer check(m>0) :: m
+        subroutine foo(m,n,o,a,b,c) ! in :onearr0:onearr.f
+            integer :: m
+            integer :: n
+            integer :: o
             real*8 dimension(n), depend(n) :: a
-            real*8 dimension(m), depend(m) :: b
+            real*8 dimension(m), depend(m), intent(in) :: b
+            real*8 dimension(o), depend(o), intent(in,out) :: c
         end subroutine foo
     end interface 
 end python module onearr0
