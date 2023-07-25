@@ -1,5 +1,9 @@
 # FORTRAN77 and F2PY
 
+FORTRAN77
+- only call/pass-by-reference.
+- intent(in,out,inout) is not part of FORTRAN77
+
 ## Example: scalar.f
 
 ### FORTRAN77

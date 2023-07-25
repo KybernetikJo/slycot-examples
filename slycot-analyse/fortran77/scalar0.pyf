@@ -6,7 +6,7 @@ python module scalar0 ! in
         subroutine foo(a,b,c) ! in :scalar0:scalar.f
             real*8 :: a
             real*8, intent(in) :: b
-            real*8, intent(inout) :: c
+            real*8, intent(in,out) :: c
         end subroutine foo
     end interface 
 end python module scalar0
