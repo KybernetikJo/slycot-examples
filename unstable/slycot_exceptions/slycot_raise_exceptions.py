@@ -30,7 +30,7 @@ def fun(info, print_loc_doc=False):
     arg_list = ["a", "b + hidden", "c + hidden"]
     loc = locals()
     # Warns section is only allowed for list [iwarn, info], if simulates that
-    doc = (fun.__doc__ if type(info) is list else fun.__doc__[:-144])
+    doc = (fun.__doc__ if type(info) is list else fun.__doc__[:-60])
 
     if print_loc_doc:
         print(loc)
@@ -55,11 +55,11 @@ class TestSyclotExceptions(unittest.TestCase):
     def test_info_pos2(self):
         self.assertRaises(slycot.exceptions.SlycotArithmeticError,fun,2)
 
-    #def test_info_pos120(self):
-    #    self.assertRaises(slycot.exceptions.SlycotResultWarning,fun,120)
+    def test_info_pos120(self):
+        self.assertWarns(slycot.exceptions.SlycotResultWarning,fun,120)
 
-    #def test_info_pos_warn1(self):
-    #    self.assertRaises(slycot.exceptions.SlycotResultWarning,fun,[1,0])
+    def test_info_pos_warn1(self):
+        self.assertWarns(slycot.exceptions.SlycotResultWarning,fun,[1,0])
 
 if __name__ == '__main__':
     unittest.main()
